@@ -1,1 +1,5 @@
-@import "helper/reset";
+@import "bases/reset";
+@import "bases/fonts";
+@import "helper/variables";
+@import "bases/bases";
+@import "layout/header";

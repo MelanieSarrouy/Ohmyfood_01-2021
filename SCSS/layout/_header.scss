@@ -1,0 +1,12 @@
+header {
+  a {
+    display: flex;
+    justify-content: center;
+      img {
+        width: 44%;
+        text-align: center;
+        padding-top: $padding1rem;
+        padding-bottom: $padding1rem;
+      }
+  }
+}

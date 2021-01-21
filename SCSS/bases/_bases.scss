@@ -1,0 +1,15 @@
+/* Styles principaux */
+body {
+  font-family: $font-family-texte;
+  color: black;
+  margin: auto;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
