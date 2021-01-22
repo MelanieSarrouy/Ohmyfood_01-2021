@@ -20,22 +20,27 @@
     <!-- Header -->
     <header>
 
-      <a href="index.html">
-        <img src="./images/ohmyfood@2x.svg" alt="Logo ohmyfood" />
-      </a>
+      <div>
+        <a class="arrow" href="index.html">
+          <i class="fas fa-arrow-left"></i>        
+        </a>
+        <a class="logo" href="index.html">
+          <img src="./images/ohmyfood@2x.svg" alt="Logo ohmyfood" />
+        </a>
+      </div>
       
     </header>
 
-    <!-- Main -->
+    <!-- Main 1 -->
     <main>
 
       <!-- Section Titre -->
-      <section>
+      <section id="section_titre">
 
         <!-- Formulaire recherche ville -->
         <form method="GET" action="#" id="recherche">
           <label for="ville"><i class="fas fa-map-marker-alt bold black"></i></label>
-          <input type="search" name="ville" id="ville" minlength="3" maxlength="25"
+          <input type="search" name="ville" id="ville"
           value="Paris, Belleville" placeholder="Paris, Belleville" />
         </form>
         <!-- Titre h1 & p -->

@@ -1,12 +1,18 @@
 header {
-  a {
+  div {
     display: flex;
     justify-content: center;
-      img {
-        width: 44%;
-        text-align: center;
-        padding-top: $padding1rem;
-        padding-bottom: $padding1rem;
-      }
-  }
+    align-items: center;
+    position: relative;    
+    .arrow {
+      position: absolute;
+      left: 2rem;
+      display: none;
+    }
+    .logo {
+      width: 44%;
+      padding-top: $padding1rem;
+      padding-bottom: $padding1rem;
+    }
+  }  
 }
