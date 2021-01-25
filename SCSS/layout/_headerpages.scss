@@ -1,10 +1,15 @@
 header {
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
+  position: relative;    
+  .arrow {
+    position: absolute;
+    left: 2rem;
+  }
   .logo {
     width: 44%;
     padding-top: $padding1rem;
     padding-bottom: $padding1rem;
-  }  
+  }
 }

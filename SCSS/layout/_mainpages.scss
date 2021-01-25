@@ -1,0 +1,94 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  figure {
+    display: flex;
+  }
+  section {
+    padding: 2.5rem 3.7%;
+    background-color: $color-background;
+    border-radius: 2.5rem 2.5rem 0 0;
+    margin-top: -2.5rem;
+    h2 {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 2rem;
+      padding-bottom: 2rem;
+      font-family: $font-family-logo;
+      font-size: 2rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .menus {
+        padding-bottom: 2rem;
+        h3 {
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        width: 2.8rem;
+        padding-bottom: 0.4rem;
+        border-bottom: solid 3px $color-tertiary;
+        }
+        .menus-details {
+          margin-top: 1rem;
+          background-color: white;
+          border-radius: 0.8rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          overflow: hidden;
+          max-height: 68px;
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+          .txt-menu {
+            line-height: 1.5rem; 
+            padding: 0.8rem;
+            width: 100%;
+            h4 {
+              font-weight: bold;
+              font-size: 1.1rem;
+            }
+            .price {
+              display: flex;
+              justify-content: space-between;            
+              p:first-child {
+                font-size: 0.9rem;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                padding-right: 1rem;
+              }  
+              p:last-child {
+                font-weight: bold;
+                font-size: 1rem;
+              }              
+            }             
+          }
+          input {
+            position: absolute;
+            left: -9999px;
+          }
+          label {
+            i {
+              color: white;
+              background-color: $color-tertiary;
+              font-size: 1.4rem;
+              padding: 1.6rem 1.2rem;
+            }          
+          }
+        }        
+      }
+      button {
+        padding: 1rem 3rem;
+        margin: 1rem auto;
+        color: white;
+        font-family: $font-family-texte;
+        border-style: none;
+        border-radius: 2rem;
+        font-size: 1rem;
+        background: linear-gradient(170deg, $color-secondary 0%, $color-primary 100%);
+      }
+    }
+  }
+}

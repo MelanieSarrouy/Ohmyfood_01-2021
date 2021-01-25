@@ -1,7 +1,7 @@
 html {
   font-size: $font-size-default;
 
-  body {
+  .body1 {
     font-family: $font-family-texte;
     
     @import "../layout/header";
