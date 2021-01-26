@@ -1,15 +1,15 @@
-header {
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;    
-  .arrow {
+  &__arrow {
     position: absolute;
-    left: 2rem;
+    left: 2rem;    
   }
-  .logo {
+  &__logo {
     width: 44%;
-    padding-top: $padding1rem;
-    padding-bottom: $padding1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }

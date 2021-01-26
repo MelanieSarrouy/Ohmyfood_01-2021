@@ -1,12 +1,20 @@
+/* Fonts */
+
 $font-size-default: 16px;
 $font-family-texte: 'roboto', 'Trebuchet MS', Arial, Helvetica, sans-serif;
-$font-family-logo: 'shrikhand', 'Brush Script MT', Arial, Helvetica, cursive;
+$font-family-logo: 'shrikhandregular', 'Brush Script MT', Arial, Helvetica, cursive;
+
+/*colors */
 
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-footer: #353535;
 $color-background: #f6f6f6;
-$color-icones: #7e7e7e;
+$color-icones: black;
+$color-icones2: #7e7e7e;
 
-$padding1rem: 1rem;
+
+/* shadows */ 
+
+$box-shadow-default: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);

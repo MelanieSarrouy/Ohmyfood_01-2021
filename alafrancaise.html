@@ -4,7 +4,7 @@
     <!-- Informations pour le navigateur -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="assets/icones/favicon.ico" />
+    <link rel="icon" type="image/png" href="./images/favicon.ico" />
 
     <!-- Informations pour le SEO -->
     <title>ohmyfood - À la française</title>
@@ -18,140 +18,140 @@
   <body class="body2">
 
     <!-- Header -->
-    <header>
+    <header class="header">
 
-      <a class="arrow" href="index.html">
+      <a class="header__arrow" href="index.html">
         <i class="fas fa-arrow-left"></i>        
       </a>
-      <a class="logo" href="index.html">
+      <a class="header__logo" href="index.html">
         <img src="./images/ohmyfood@2x.svg" alt="Logo ohmyfood" />
       </a>
       
     </header>
 
     <!-- Main 2 -->
-    <main>
+    <main class="main">
 
-      <figure>
+      <figure class="main__img">
         <img src="./images/a_la_francaise_800.jpg" alt="Photo d'un plat du restaurant La note enchantée" />
       </figure>
 
       <!-- Section Menu -->
-      <section>
+      <section class="main__section-menus">
 
-        <h2>À la française<i class="far fa-heart"></i></h2>
+        <h2 class="main__section-menus__h2">À la française<i class="far fa-heart"></i></h2>
 
         <!-- Formulaire choix du menu -->
-        <form method="POST" action="#">
+        <form method="POST" action="#" class="form">
 
-          <div class="menus" id="entrees">
-            <h3>entrées</h3>
-            <div class="menus-details">
-              <div class="txt-menu">
+          <div class="menus">
+            <h3 class="menus__h3">entrées</h3>
+            <div class="choice">
+              <div class="choice__txt">
                 <h4>Tartare de poulpe acidulé</h4>
-                <div class="price">
+                <div class="choice__txt__price">
                   <p>Aux zestes d'orange</p>
-                  <p>25€</p>
+                  <p class="bold">25€</p>
                 </div>
               </div>
-              <label for="entree1"><i class="fas fa-check-circle"></i></label>
-              <input type="checkbox" name="entree1" id="entree1" />
+              <label class="choice__label" for="entree1"><i class="fas fa-check-circle"></i></label>
+              <input class="choice__input" type="checkbox" name="entree1" id="entree1" />
             </div>
-            <div class="menus-details">
-              <div class="txt-menu">
+            <div class="choice">
+              <div class="choice__txt">
                 <h4>Velouté de légumes d'antan</h4>
-                <div class="price">
+                <div class="choice__txt__price">
                   <p>Carotte, panais, topinambour</p>
-                  <p>35€</p>
+                  <p class="bold">35€</p>
                 </div>  
               </div>
-              <label for="entree2"><i class="fas fa-check-circle"></i></label>
-              <input type="checkbox" name="entree2" id="entree2" />
+              <label class="choice__label" for="entree2"><i class="fas fa-check-circle"></i></label>
+              <input class="choice__input" type="checkbox" name="entree2" id="entree2" />
             </div>
-            <div class="menus-details">
-              <div class="txt-menu">
+            <div class="choice">
+              <div class="choice__txt">
                 <h4>Soupe à l'oignon</h4>
-                <div class="price">
+                <div class="choice__txt__price">
                   <p>Revisitée</p>
-                  <p>20€</p>
+                  <p class="bold">20€</p>
                 </div>
               </div>
-              <label for="entree3"><i class="fas fa-check-circle"></i></label>
-              <input type="checkbox" name="entree3" id="entree3" />
+              <labe class="choice__label"l for="entree3"><i class="fas fa-check-circle"></i></label>
+              <input class="choice__input" type="checkbox" name="entree3" id="entree3" />
             </div>            
           </div>
 
-          <div class="menus" id="plats">
-            <h3>plats</h3>
-            <div class="menus-details">
-              <div class="txt-menu">
-                <h4>Coquilles Saint-Jacques</h4>
-                <div class="price">
+          <div class="menus">
+            <h3 class="menus__h3">plats</h3>
+            <div class="choice">
+              <div class="choice__txt">
+                <h4 class="choice__txt__h4">Coquilles Saint-Jacques</h4>
+                <div class="choice__txt__price">
                   <p>Accompagnées d'une purée de panais</p>
-                  <p>40€</p>
+                  <p class="bold">40€</p>
                 </div>
               </div>
-              <label for="plat1"><i class="fas fa-check-circle"></i></label>
-              <input type="checkbox" name="plat1" id="plat1" />
+              <label class="choice__label" for="plat1"><i class="fas fa-check-circle"></i></label>
+              <input class="choice__input" type="checkbox" name="plat1" id="plat1" />
             </div>
-            <div class="menus-details">
-              <div class="txt-menu">
+            <div class="choice">
+              <div class="choice__txt">
                 <h4>Magret de canard</h4>
-                <div class="price">
+                <div class="choice__txt__price">
                   <p>Et parmentier de pommes de terre</p>
-                  <p>35€</p>
+                  <p class="bold">35€</p>
                 </div>
               </div>
-              <label for="plat2"><i class="fas fa-check-circle"></i></label>
-              <input type="checkbox" name="plat2" id="plat2" />
+              <label class="choice__label" for="plat2"><i class="fas fa-check-circle"></i></label>
+              <input class="choice__input" type="checkbox" name="plat2" id="plat2" />
             </div>
-            <div class="menus-details">
-              <div class="txt-menu">
+            <div class="choice">
+              <div class="choice__txt">
                 <h4>Pigeonneau d’Ille-et-Vilaine</h4>
-                <div class="price">
+                <div class="choice__txt__price">
                   <p>Sur son lit de gnocchis aux légumes</p>
-                  <p>44€</p>
+                  <p class="bold">44€</p>
                 </div>
               </div>
-              <label for="plat3"><i class="fas fa-check-circle"></i></label>
-              <input type="checkbox" name="plat3" id="plat3" />
+              <label class="choice__label" for="plat3"><i class="fas fa-check-circle"></i></label>
+              <input class="choice__input" type="checkbox" name="plat3" id="plat3" />
             </div>
           </div>
 
-          <div class="menus" id="desserts">
-            <h3>desserts</h3>
-            <div class="menus-details">
-              <div class="txt-menu">
+          <div class="menus">
+            <h3 class="menus__h3">desserts</h3>
+            <div class="choice">
+              <div class="choice__txt">
                 <h4>Pétales de violettes glacés</h4>
-                <div class="price">
+                <div class="choice__txt__price">
                   <p>Et purée de noisettes</p>
-                  <p>18€</p>
+                  <p class="bold">18€</p>
                 </div>
               </div>
-              <label for="dessert1"><i class="fas fa-check-circle"></i></label>
-              <input type="checkbox" name="dessert1" id="dessert1" />
+              <label class="choice__label" for="dessert1"><i class="fas fa-check-circle"></i></label>
+              <input class="choice__input" type="checkbox" name="dessert1" id="dessert1" />
             </div>
-            <div class="menus-details">
-              <div class="txt-menu">
+            <div class="choice">
+              <div class="choice__txt">
                 <h4>Fondant au chocolat</h4>
-                <div class="price">
+                <div class="choice__txt__price">
                   <p>Revisité</p>
-                  <p>22€</p>
+                  <p class="bold">22€</p>
                 </div>
               </div>
-              <label for="dessert2"><i class="fas fa-check-circle"></i></label>
-              <input type="checkbox" name="dessert2" id="dessert2" />
+              <label class="choice__label" for="dessert2"><i class="fas fa-check-circle"></i></label>
+              <input class="choice__input" type="checkbox" name="dessert2" id="dessert2" />
             </div>
-            <div class="menus-details">
-              <div class="txt-menu">
+            <div class="choice">
+              <div class="choice__txt">
                 <h4>Millefeuille croustillant</h4>
-                <div class="price">
+                <div class="choice__txt__price">
                   <p>Myrtilles et pâte d’amande</p>
-                  <p>23€</p>
+                  <p class="bold">23€</p>
                 </div>
               </div>
-              <label for="plat3"><i class="fas fa-check-circle"></i></label>
-              <input type="checkbox" name="dessert3" id="dessert3" />
+              <label class="choice__label" for="plat3"><i class="fas fa-check-circle"></i></label>
+              <input class="choice__input" type="checkbox" name="dessert3" id="dessert3" />
             </div>
           </div>
 
@@ -164,14 +164,14 @@
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
 
-      <h3>ohmyfood</h3>
-      <ul>
-        <li><a href="#"><span><i class="fas fa-utensils"></i></span>Proposer un restaurant</a></li>
-        <li><a href="#"><span><i class="fas fa-hands-helping"></i></span>Devenir partenaire</a></li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
+      <h3 class="footer__h3">ohmyfood</h3>
+      <ul class="footer__list">
+        <li><a class="link" href="#"><span class="link__icon"><i class="link__icon--color fas fa-utensils"></i></span>Proposer un restaurant</a></li>
+        <li><a class="link" href="#"><span class="link__icon"><i class="link__icon--color fas fa-hands-helping"></i></span>Devenir partenaire</a></li>
+        <li><a class="link" href="#">Mentions légales</a></li>
+        <li><a class="link" href="mailto:ohmyfood@gmail.com">Contact</a></li>
       </ul>
 
     </footer>
