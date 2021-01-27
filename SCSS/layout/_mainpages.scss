@@ -28,11 +28,15 @@
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: center;          
+  justify-content: center;
+  position: relative;          
   }
 
 .menus {
   padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
   &__h3 {
     text-transform: uppercase;
     width: 2.8rem;
@@ -41,7 +45,9 @@
     border-bottom: solid 3px $color-tertiary;
   }  
 }
-.choice {
+.label {
+  cursor: pointer;
+  position: relative;
   margin-top: 1rem;
   background-color: white;
   border-radius: 0.8rem;
@@ -50,38 +56,48 @@
   align-items: center;
   overflow: hidden;
   max-height: 68px;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
   &__txt {
     line-height: 1.5rem; 
     padding: 0.8rem;
     width: 100%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    padding-right: 1rem;
+    h4 {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      padding-right: 1rem;
+    }
     &__price {
       display: flex;
-      justify-content: space-between;            
+      justify-content: space-between; 
+      padding-right: .5rem;           
       p:first-child {
         font-size: 0.9rem;
-        white-space: nowrap;
         text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         padding-right: 1rem;
       }             
     }             
   }
-  &__input {
-    position: absolute;
-    left: -9999px;
-  }
-  &__label {
-    i {
-      color: white;
-      background-color: $color-tertiary;
-      font-size: 1.4rem;
-      padding: 1.6rem 1.2rem;
-    }          
-  }
+  &__icon {
+    display: none;
+    color: white;
+    background-color: $color-tertiary;
+    font-size: 1.4rem;
+    padding: 1.6rem 1.4rem;
+    max-width: 3rem;
+    &:focus {
+      display: block;
+      outline: none;
+    }
+  }  
 }
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
 button {
   padding: 1rem 3rem;
   margin: 1rem auto;
@@ -91,4 +107,5 @@ button {
   border-radius: 2rem;
   font-size: 1rem;
   background: linear-gradient(170deg, $color-secondary 0%, $color-primary 100%);
+  @include box-shadow;
 }
