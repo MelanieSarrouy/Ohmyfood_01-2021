@@ -10,33 +10,66 @@
     padding: 2.5rem 3.7%;
     background-color: $color-background;
     border-radius: 2.5rem 2.5rem 0 0;
-    margin-top: -2.5rem;
-    &__h2 {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 1.5rem 2rem 2%;
-      font-family: $font-family-logo;
-      font-size: 1.7rem;
-      font-weight: normal;
-      i {
-        color: black;
-      }
+    margin-top: -2.5rem;       
+  }
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.75rem 2rem 2%;
+  margin-top: -1rem;
+  &__h2 {
+    font-family: $font-family-logo;
+    font-size: 1.7rem;
+    font-weight: normal;
+  }
+} 
+.button-heart {
+  border-style: none;
+  font-size: 1.8rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  position: relative; 
+  background-color: $color-background;
+  outline: none;
+  &__icones {
+    &__full {
+      background: linear-gradient(10deg, $color-secondary 0%, $color-primary 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      position: absolute;
+      left: 0.70rem;
+      top: 0.70rem;
+      opacity: 0;
     }
-    
+    &__empty {
+      position: absolute;
+      left: 0.70rem;
+      top: 0.70rem;
+      opacity: 1;
+    }   
+  }
+  &:active, &:hover, &:focus {
+    .button-heart__icones__empty {
+      opacity: 0;
+    }
+    .button-heart__icones__full {
+      opacity: 1;
+    }
   }
 }
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  position: relative;          
+  justify-content: center;   
   }
 
 .menus {
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
   &__h3 {
     text-transform: uppercase;
     width: 2.8rem;
@@ -45,9 +78,8 @@
     border-bottom: solid 3px $color-tertiary;
   }  
 }
-.label {
+.choice {
   cursor: pointer;
-  position: relative;
   margin-top: 1rem;
   background-color: white;
   border-radius: 0.8rem;
@@ -56,49 +88,68 @@
   align-items: center;
   overflow: hidden;
   max-height: 68px;
+  width: 100%;
   box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
-  &__txt {
-    line-height: 1.5rem; 
-    padding: 0.8rem;
-    width: 100%;
+  &__text {
+    padding: 0.8rem 0rem 0.8rem 0.8rem;
+    width: auto;
+    line-height: 1.5rem;
+    overflow: hidden;
     h4 {
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
-      padding-right: 1rem;
     }
-    &__price {
-      display: flex;
-      justify-content: space-between; 
-      padding-right: .5rem;           
-      p:first-child {
-        font-size: 0.9rem;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        padding-right: 1rem;
-      }             
-    }             
+    p {
+      font-size: 0.9rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
   }
-  &__icon {
-    display: none;
-    color: white;
-    background-color: $color-tertiary;
-    font-size: 1.4rem;
-    padding: 1.6rem 1.4rem;
-    max-width: 3rem;
-    &:focus {
-      display: block;
-      outline: none;
+  &__check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__price {
+      padding: 1.5rem 1.3rem 0 1.3rem;
     }
-  }  
-}
-[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-  position: absolute;
-  left: -9999px;
+    &__checked {
+      width: 0rem;
+      height: 5rem;
+      background-color: $color-tertiary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.4rem;
+      transform-origin: 50% left;
+      transition: width 200ms cubic-bezier(.11,.79,.38,.96) 0.1s;
+      &::before {
+        color: white;
+        transform: rotateZ(-360deg);
+        transform-origin: 50% 50%;
+        
+      }
+    }
+  }
+  &:active, &:hover {
+    .choice__check__checked {
+      width: 3.5rem;
+      transition: width 500ms cubic-bezier(.11,.79,.38,.96);
+      &::before {
+        transform: rotateZ(0deg);        
+        transition: transform 500ms cubic-bezier(.11,.79,.38,.96);
+      }
+
+    }
+  }
 }
 
-button {
+
+
+/* Bouton "Commander"  */
+
+.btn {
   padding: 1rem 3rem;
   margin: 1rem auto;
   color: white;
@@ -108,4 +159,9 @@ button {
   font-size: 1rem;
   background: linear-gradient(170deg, $color-secondary 0%, $color-primary 100%);
   @include box-shadow;
+  transition: opacity 2s, box-shadow 1s;
+  &:hover {
+    opacity: 0.75;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
+  }
 }
