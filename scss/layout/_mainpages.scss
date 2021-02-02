@@ -182,10 +182,10 @@
   font-size: 1rem;
   background: linear-gradient(170deg, $color-secondary 0%, $color-primary 100%);
   @include box-shadow;
-  transition: opacity 2s, box-shadow 1s;
   &:hover, &:active {
-    opacity: 0.75;
-    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.6);
+    opacity: 0.8;
+    box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.7);
+    transition: opacity 800ms ease-out, box-shadow 200ms ease-in-out;
   }
   &:focus {
     outline: none;

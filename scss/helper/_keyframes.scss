@@ -1,0 +1,47 @@
+@keyframes loader {
+  0%, 98% {
+    opacity: 1;
+    cursor: wait;
+    transform: translateX(0px);
+  }
+  99% {
+    opacity: 0;
+    cursor: wait;
+    transform: translateX(0px);
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes icone {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  38% {
+    transform: rotate(396deg);
+  }
+  45% {
+    transform: rotate(324deg);
+  }
+  52% {
+    transform: rotate(372deg);
+  }
+  60% {
+    transform: rotate(348deg);    
+  }
+  66% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+@keyframes img {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
