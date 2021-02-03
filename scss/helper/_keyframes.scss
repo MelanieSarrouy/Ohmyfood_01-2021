@@ -7,10 +7,9 @@
   99% {
     opacity: 0;
     cursor: wait;
-    transform: translateX(0px);
   }
   100% {
-    display: none;
+    transform: translateX(0px);
   }
 }
 @keyframes icone {

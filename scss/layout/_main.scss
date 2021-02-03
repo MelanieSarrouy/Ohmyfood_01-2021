@@ -114,7 +114,7 @@ input[type="search"] {
   }
   &:hover, &:active {
     opacity: 0.8;
-    box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 1);
     transition: opacity 800ms ease-out, box-shadow 200ms ease-in-out;
 
   }
