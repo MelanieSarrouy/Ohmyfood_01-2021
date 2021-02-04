@@ -1,3 +1,5 @@
+/* Keyframes loader */ 
+
 @keyframes loader {
   0%, 98% {
     opacity: 1;
@@ -35,12 +37,47 @@
   }
 }
 @keyframes img {
-  from {
+  0% {
     opacity: 0;
     transform: scale(0);
   }
-  to {
+  95% {
     opacity: 1;
     transform: scale(1.2);
+  }
+}
+@keyframes hidden {
+  0%, 99% {
+    height: 0;
+  }
+  100% {
+    height: auto;
+  }
+}
+ /* Keyframes menus */ 
+
+@keyframes menus {
+  0% {
+    transform: scaleY(1.2);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+@keyframes choice {
+  0% {
+    opacity: 0;
+    transform: translateY(0.7rem);
+  }
+  75% {
+    transform: translateY(0rem);
+  }
+  100% {
+    opacity: 1;
   }
 }

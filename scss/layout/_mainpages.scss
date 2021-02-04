@@ -76,7 +76,7 @@
       opacity: 1;
       &::after {
         transform: scaleY(0);
-        transition: transform 1500ms cubic-bezier(0,.27,.02,.99);
+        transition: transform 500ms cubic-bezier(0,.27,.02,.99);
       }
     }
   }
@@ -88,19 +88,73 @@
   display: flex;
   flex-direction: column;
   justify-content: center;   
-  }
+}
+h3 {
+  text-transform: uppercase;
+  width: 2.8rem;
+  padding-bottom: 0.4rem;
+  margin-left: 2%;
+  border-bottom: solid 3px $color-tertiary;
+}  
 
 .menus {
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  &__h3 {
-    text-transform: uppercase;
-    width: 2.8rem;
-    padding-bottom: 0.4rem;
-    margin-left: 2%;
-    border-bottom: solid 3px $color-tertiary;
-  }  
+  opacity: 0;
+  transform-origin: 50% top;
+  transform: scaleY(1);
+  &:nth-child(2) {
+    animation: menus 1000ms forwards ease-in;
+    .choice {
+      &:nth-child(1) {
+        animation: choice 1000ms 400ms both ease-in-out;
+      } 
+      &:nth-child(2) {
+        animation: choice 1000ms 700ms both ease-in-out;
+      }   
+      &:nth-child(3) {
+        animation: choice 1000ms 1000ms both ease-in-out;
+      }   
+      &:nth-child(4) {
+        animation: choice 1000ms 1200ms both ease-in-out;
+      } 
+    }
+  }
+  &:nth-child(4) {
+    animation: menus 1000ms 1000ms forwards ease-in;
+    .choice {
+      &:nth-child(1) {
+        animation: choice 1000ms 1400ms both ease-in-out;
+      } 
+      &:nth-child(2) {
+        animation: choice 1000ms 1700ms both ease-in-out;
+      }   
+      &:nth-child(3) {
+        animation: choice 1000ms 2000ms both ease-in-out;
+      }   
+      &:nth-child(4) {
+        animation: choice 1000ms 2200ms both ease-in-out;
+      } 
+    }
+  }
+  &:nth-child(6) {
+    animation: menus 1000ms 2000ms forwards ease-in;
+    .choice {
+      &:nth-child(1) {
+        animation: choice 1000ms 2400ms both ease-in-out;
+      } 
+      &:nth-child(2) {
+        animation: choice 1000ms 2700ms both ease-in-out;
+      }   
+      &:nth-child(3) {
+        animation: choice 1000ms 3000ms both ease-in-out;
+      }   
+      &:nth-child(4) {
+        animation: choice 1000ms 3200ms both ease-in-out;
+      } 
+    }
+  }
 }
 .choice {
   cursor: pointer;
@@ -113,7 +167,9 @@
   overflow: hidden;
   max-height: 68px;
   width: 100%;
-  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);  
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25); 
+  opacity: 0;
+  transform: translateY(0rem);
   &__text {
     padding: 0.8rem 0rem 0.8rem 0.8rem;
     width: auto;
@@ -184,7 +240,7 @@
   @include box-shadow;
   &:hover, &:active {
     opacity: 0.8;
-    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 1);
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.8);
     transition: opacity 800ms ease-out, box-shadow 200ms ease-in-out;
   }
   &:focus {
