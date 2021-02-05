@@ -47,11 +47,10 @@
           </form>
             <!-- Titre h1 & p -->
           <h1 class="section-title__heading">Réservez le menu qui vous convient</h1>
-          <p class="section-title__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+          <p class="section-title__subtitle">Découvrez des restaurants d'exception,</br>
+            sélectionnés par nos soins.</p>
           <!-- Bouton -->
-          <a class="section-title__button" href="#restaurants">
-            <button class="button" type="submit" >Explorer nos restaurants</button>
-          </a>
+          <button class="button" type="submit" >Explorer nos restaurants</button>
 
 
         </section>
@@ -61,15 +60,9 @@
 
           <h2>Fonctionnement</h2>
           <ol class="aside__list">
-            <a class="aside__list__link" href="#restaurants">
-              <li class="item bold"><span class="item__icon"><i  class="item__icon--size fas fa-mobile-alt"></i></span>Choisissez un restaurant</li>
-            </a>
-            <a class="aside__list__link" href="#fonctionnement">
-              <li class="item bold"><span class="item__icon"><i class="item__icon--size fas fa-list-ul"></i></span>Composez votre menu</li>
-            </a>
-            <a class="aside__list__link" href="#fonctionnement">
-              <li class="item bold"><span class="item__icon"><i class="item__icon--size fas fa-store"></i></span>Dégustez au restaurant</li>
-            </a>
+            <li class="item bold"><span class="item__icon"><i  class="item__icon--size fas fa-mobile-alt"></i></span>Choisissez un restaurant</li>
+            <li class="item bold"><span class="item__icon"><i class="item__icon--size fas fa-list-ul"></i></span>Composez votre menu</li>
+            <li class="item bold"><span class="item__icon"><i class="item__icon--size fas fa-store"></i></span>Dégustez au restaurant</li>
           </ol>
 
         </aside>
@@ -79,29 +72,35 @@
 
           <h2 class="section-restaurants__heading">Restaurants</h2>
           <div class="section-restaurants__container">
-            <a href="lapalettedugout.html" class="cards">
-              <article>
+            
+            <article class="cards">
+              <a href="lapalettedugout.html">
+                  <figure class="cards__img">
+                    <img srcset="./images/la_palette_du_gout_S.jpg 500w, ./images/la_palette_du_gout_M.jpg 1000w" 
+                         sizes="(max-width: 1024px) 500px, 1000px"
+                         src="./images/la_palette_du_gout_S.jpg" alt="Photo d'un plat du restaurant La palette du goût" />
+                    <p class="new bold">Nouveau</p>
+                  </figure>
+                  <div class="cards__txt-card">
+                    <div>
+                      <h3 class="bold">La palette du goût</h3>
+                      <p>Ménilmontant</p>
+                    </div>
+                  </div>              
+              </a>
+              <label class="button-heart" for="heart1">                  
+                <i class="button-heart__full fas fa-heart"></i>
+                <i class="button-heart__empty far fa-heart"></i>
+              </label>
+              <input type="checkbox" id="heart1" />
+            </article>  
+
+            <article class="cards">
+              <a href="lanoteenchantee.html">
                 <figure class="cards__img">
-                  <img src="./images/la_palette_du_gout_S.jpg" alt="Photo d'un plat du restaurant La palette du goût" />
-                  <p class="new bold">Nouveau</p>
-                </figure>
-                <div class="cards__txt-card">
-                  <div>
-                    <h3 class="bold">La palette du goût</h3>
-                    <p>Ménilmontant</p>
-                  </div>
-                  <label class="button-heart" for="heart1">                  
-                    <i class="button-heart__full fas fa-heart"></i>
-                    <i class="button-heart__empty far fa-heart"></i>
-                  </label>
-                  <input type="checkbox" id="heart1" />
-                </div>              
-              </article>  
-            </a>
-            <a href="lanoteenchantee.html" class="cards">
-              <article>
-                <figure class="cards__img">
-                  <img src="./images/la_note_enchantee_S.jpg" alt="Photo d'un plat du restaurant La note enchantée" />
+                  <img srcset="./images/la_note_enchantee_S.jpg 500w, ./images/la_note_enchantee_M.jpg 1000w"
+                       sizes="(max-width: 1024px) 500px, 1000px"
+                       src="./images/la_note_enchantee_S.jpg" alt="Photo d'un plat du restaurant La note enchantée" />
                   <p class="new bold">Nouveau</p>
                 </figure>
                 <div class="cards__txt-card">
@@ -109,50 +108,58 @@
                     <h3 class="bold">La note enchantée</h3>
                     <p>Charonne</p>
                   </div>
-                  <label class="button-heart" for="heart2">                  
-                    <i class="button-heart__full fas fa-heart"></i>
-                    <i class="button-heart__empty far fa-heart"></i>
-                  </label>
-                  <input type="checkbox" id="heart2" />
-                  </div>              
-              </article>  
-            </a>
-            <a href="alafrancaise.html" class="cards">
-              <article>
+                </div>              
+              </a>
+              <label class="button-heart" for="heart2">                  
+                <i class="button-heart__full fas fa-heart"></i>
+                <i class="button-heart__empty far fa-heart"></i>
+              </label>
+              <input type="checkbox" id="heart2" />
+            </article>  
+
+            
+            <article class="cards">
+              <a href="alafrancaise.html">
                 <figure class="cards__img">
-                  <img src="./images/a_la_francaise_S.jpg" alt="Photo d'un plat du restaurant À la française" />
+                  <img srcset="./images/a_la_francaise_S.jpg 500w, ./images/a_la_francaise_M.jpg 1000w"
+                       sizes="(max-width: 1024px) 500px, 1000px"
+                       src="./images/a_la_francaise_S.jpg" alt="Photo d'un plat du restaurant À la française" />
                 </figure>
                 <div class="cards__txt-card">
                   <div>
                     <h3 class="bold">À la française</h3>
                     <p>Cité Rouge</p>
                   </div>
-                  <label class="button-heart" for="heart3">                  
-                    <i class="button-heart__full fas fa-heart"></i>
-                    <i class="button-heart__empty far fa-heart"></i>
-                  </label>
-                  <input type="checkbox" id="heart3" />
                 </div>              
-              </article>  
-            </a>
-            <a href="ledelicedessens.html" class="cards">
-              <article>
+              </a>
+              <label class="button-heart" for="heart3">                  
+                <i class="button-heart__full fas fa-heart"></i>
+                <i class="button-heart__empty far fa-heart"></i>
+              </label>
+              <input type="checkbox" id="heart3" />
+            </article>  
+
+            <article class="cards">
+              <a href="ledelicedessens.html">
                 <figure class="cards__img">
-                  <img src="./images/le_delice_des_sens_S.jpg" alt="Photo d'un plat du restaurant Le délice des sens" />
+                  <img srcset="./images/le_delice_des_sens_S.jpg 500w, ./images/le_delice_des_sens_M.jpg 1000w"
+                       sizes="(max-width: 1024px) 500px, 1000px"
+                       src="./images/le_delice_des_sens_S.jpg" alt="Photo d'un plat du restaurant Le délice des sens" />
                 </figure>
                 <div class="cards__txt-card">
                   <div>
                     <h3 class="bold">Le délice des sens</h3>
                     <p>Folie-Méricourt</p>
                   </div>
-                  <label class="button-heart" for="heart4">                  
-                    <i class="button-heart__full fas fa-heart"></i>
-                    <i class="button-heart__empty far fa-heart"></i>
-                  </label>
-                  <input type="checkbox" id="heart4" />
                 </div>              
-              </article>  
-            </a>
+              </a>
+              <label class="button-heart" for="heart4">                  
+                <i class="button-heart__full fas fa-heart"></i>
+                <i class="button-heart__empty far fa-heart"></i>
+              </label>
+              <input type="checkbox" id="heart4" />
+            </article>  
+
           </div>
 
         </section>

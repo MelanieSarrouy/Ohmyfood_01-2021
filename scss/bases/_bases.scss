@@ -19,17 +19,33 @@ i {
 h1 {
   font-weight: bold;
   font-size: 1.6rem;
+  @include respond-to(medium-screen) {
+    font-size: 1.8rem;
+  }
+
 }
 h2 {
   font-weight: bold;
   font-size: 1.4rem;
+  @include respond-to(medium-screen) {
+    font-size: 1.6rem;
+  }
+
 }
 h3 {
   font-size: 1.1rem;
+  @include respond-to(medium-screen) {
+    font-size: 1.3rem;
+  }
+
 }
 h4 {
   font-weight: bold;
   font-size: 1.1rem;
+  @include respond-to(medium-screen) {
+    font-size: 1.3rem;
+  }
+
 }
 .bold {
   font-weight: bold;
