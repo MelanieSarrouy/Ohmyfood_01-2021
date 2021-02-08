@@ -32,158 +32,144 @@
     <!-- Main 2 -->
     <main class="main">
 
-      <figure class="main__img">
-        <img src="./images/a_la_francaise_800.jpg" alt="Photo d'un plat du restaurant La note enchantée" />
-      </figure>
+      <picture class="main__img">
+        <source media="(max-width: 720px)" srcset="./images/a_la_francaise_800.jpg" />
+        <source media="(max-width: 1030px)" srcset="./images/a_la_francaise_panoM.jpg" />
+        <source media="(min-width: 1030px)" srcset="./images/a_la_francaise_panoL.jpg" />
+        <img src="./images/a_la_francaise_800.jpg" alt="Photo d'un plat du restaurant À la française" />
+      </picture>
 
       <!-- Section Menu -->
       <section class="main__section-menus">
 
         <div class="title">
-          <h2 class="title__h2">La palette du goût</h2>
+          <h2 class="title__h2">À la française</h2>
           <button class="button-heart" type="submit">
-            <div class="button-heart__icones">
-              <i class="button-heart__icones__full fas fa-heart"></i>
-              <i class="button-heart__icones__empty far fa-heart"></i>
-            </div>
+            <i class="button-heart__full fas fa-heart"></i>
+            <i class="button-heart__empty far fa-heart"></i>
           </button>
         </div>        
 
         <!-- Formulaire choix du menu -->
         <form method="POST" action="#" class="form">
-
+          
+          
           <div class="menus">
             <h3 class="menus__h3">entrées</h3>
-            <div class="choice">
-              <label class="label" for="entree1"></i>
-                <div class="label__txt">
-                  <h4>Tartare de poulpe acidulé</h4>
-                  <div class="label__txt__price">
-                    <p>Aux zestes d'orange</p>
-                    <p class="bold">25€</p>
-                  </div>
-                </div>
-                <i class="label__icon fas fa-check-circle"></i>
-              </label>
-              <input class="input" type="checkbox" name="entree1" id="entree1" />
-            </div>
-            <div class="choice">
-              <label class="label" for="entree2"></i>
-                <div class="label__txt">
-                  <h4>Velouté de légumes d'antan</h4>
-                  <div class="label__txt__price">
-                    <p>Carotte, panais, topinambour</p>
-                    <p class="bold">35€</p>
-                  </div>
-                </div>
-                <i class="label__icon fas fa-check-circle"></i>
-              </label>
-              <input class="input" type="checkbox" name="entree2" id="entree2" />
-            </div>
-            <div class="choice">
-              <label class="label" for="entree3"></i>
-                <div class="label__txt">
-                  <h4>Soupe à l'oignon</h4>
-                  <div class="label__txt__price">
-                    <p>Revisitée</p>
-                    <p class="bold">20€</p>
-                  </div>
-                </div>
-                <i class="label__icon fas fa-check-circle"></i>
-              </label>
-              <input class="input" type="checkbox" name="entree3" id="entree3" />
-            </div>
-          </div>
 
+            <div class="choice">
+              <div class="choice__text">
+                <h4>Tartare de poulpe acidulé</h4>
+                <p>Aux zestes d'orange</p>
+              </div>
+              <div class="choice__check">
+                <p class="choice__check__price bold">25€</p>
+                <i class="choice__check__checked fas fa-check-circle"></i>
+              </div> 
+            </div>
+
+            <div class="choice">
+              <div class="choice__text">
+                <h4>Velouté de légumes d'antan</h4>
+                <p>Carotte, panais, topinambour</p>
+              </div>
+              <div class="choice__check">
+                <p class="choice__check__price bold">35€</p>
+                <i class="choice__check__checked fas fa-check-circle"></i>
+              </div> 
+            </div>
+
+            <div class="choice">
+              <div class="choice__text">
+                <h4>Soupe à l'oignon</h4>
+                <p>Revisitée</p>
+              </div>
+              <div class="choice__check">
+                <p class="choice__check__price bold">20€</p>
+                <i class="choice__check__checked fas fa-check-circle"></i>
+              </div> 
+            </div>
+
+          </div>
+          
+          
           <div class="menus">
             <h3 class="menus__h3">plats</h3>
             <div class="choice">
-              <label class="label" for="plat1"></i>
-                <div class="label__txt">
-                  <h4>Coquilles Saint-Jacques</h4>
-                  <div class="label__txt__price">
-                    <p>Accompagnées d'une purée de panais</p>
-                    <p class="bold">40€</p>
-                  </div>
-                </div>
-                <i class="label__icon fas fa-check-circle"></i>
-              </label>
-              <input class="input" type="checkbox" name="plat1" id="plat1" />
+              <div class="choice__text">
+                <h4>Coquilles Saint-Jacques</h4>
+                <p>Accompagnées d'une purée de panais</p>
+              </div>
+              <div class="choice__check">
+                <p class="choice__check__price bold">40€</p>
+                <i class="choice__check__checked fas fa-check-circle"></i>
+              </div> 
             </div>
-            <div class="choice">
-              <label class="label" for="plat2"></i>
-                <div class="label__txt">
-                  <h4>Magret de canard</h4>
-                  <div class="label__txt__price">
-                    <p>Et parmentier de pommes de terre</p>
-                    <p class="bold">35€</p>
-                  </div>
-                </div>
-                <i class="label__icon fas fa-check-circle"></i>
-              </label>
-              <input class="input" type="checkbox" name="plat2" id="plat2" />
-            </div>
-            <div class="choice">
-              <label class="label" for="plat3"></i>
-                <div class="label__txt">
-                  <h4>Pigeonneau d’Ille-et-Vilaine</h4>
-                  <div class="label__txt__price">
-                    <p>Sur son lit de gnocchis aux légumes</p>
-                    <p class="bold">44€</p>
-                  </div>
-                </div>
-                <i class="label__icon fas fa-check-circle"></i>
-              </label>
-              <input class="input" type="checkbox" name="plat3" id="plat3" />
-            </div>
-          </div>
 
+            <div class="choice">
+              <div class="choice__text">
+                <h4>Magret de canard</h4>
+                <p>Et parmentier de pommes de terre</p>
+              </div>
+              <div class="choice__check">
+                <p class="choice__check__price bold">35€</p>
+                <i class="choice__check__checked fas fa-check-circle"></i>
+              </div> 
+            </div>
+
+            <div class="choice">
+              <div class="choice__text">
+                <h4>Pigeonneau d’Ille-et-Vilaine</h4>
+                <p>Sur son lit de gnocchis aux légumes</p>
+              </div>
+              <div class="choice__check">
+                <p class="choice__check__price bold">44€</p>
+                <i class="choice__check__checked fas fa-check-circle"></i>
+              </div> 
+            </div>
+
+          </div>
+          
+          
           <div class="menus">
             <h3 class="menus__h3">desserts</h3>
             <div class="choice">
-              <label class="label" for="dessert1"></i>
-                <div class="label__txt">
-                  <h4>Pétales de violettes glacés</h4>
-                  <div class="label__txt__price">
-                    <p>Et purée de noisettes</p>
-                    <p class="bold">18€</p>
-                  </div>
-                </div>
-                <i class="label__icon fas fa-check-circle"></i>
-              </label>
-              <input class="input" type="checkbox" name="dessert1" id="dessert1" />
+              <div class="choice__text">
+                <h4>étales de violettes glacés</h4>
+                <p>Et purée de noisettes</p>
+              </div>
+              <div class="choice__check">
+                <p class="choice__check__price bold">18€</p>
+                <i class="choice__check__checked fas fa-check-circle"></i>
+              </div> 
             </div>
+
             <div class="choice">
-              <label class="label" for="dessert2"></i>
-                <div class="label__txt">
-                  <h4>Fondant au chocolat</h4>
-                  <div class="label__txt__price">
-                    <p>Revisité</p>
-                    <p class="bold">22€</p>
-                  </div>
-                </div>
-                <i class="label__icon fas fa-check-circle"></i>
-              </label>
-              <input class="input" type="checkbox" name="dessert2" id="dessert2" />
+              <div class="choice__text">
+                <h4>Fondant au chocolat</h4>
+                <p>Revisité</p>
+              </div>
+              <div class="choice__check">
+                <p class="choice__check__price bold">22€</p>
+                <i class="choice__check__checked fas fa-check-circle"></i>
+              </div> 
             </div>
+
             <div class="choice">
-              <label class="label" for="dessert3"></i>
-                <div class="label__txt">
-                  <h4>Millefeuille croustillant</h4>
-                  <div class="label__txt__price">
-                    <p>Myrtilles et pâte d’amande</p>
-                    <p class="bold">23€</p>
-                  </div>
-                </div>
-                <i class="label__icon fas fa-check-circle"></i>
-              </label>
-              <input class="input" type="checkbox" name="dessert3" id="dessert3" />
+              <div class="choice__text">
+                <h4>Millefeuille croustillant</h4>
+                <p>Myrtilles et pâte d’amande</p>
+              </div>
+              <div class="choice__check">
+                <p class="choice__check__price bold">23€</p>
+                <i class="choice__check__checked fas fa-check-circle"></i>
+              </div> 
             </div>
           </div>
 
-          <button type="submit" name="commander" id="commander">Commander</button>
-        
         </form>
+
+        <button class="btn" type="submit">Commander</button>
 
       </section>
 

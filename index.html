@@ -47,7 +47,7 @@
           </form>
             <!-- Titre h1 & p -->
           <h1 class="section-title__heading">Réservez le menu qui vous convient</h1>
-          <p class="section-title__subtitle">Découvrez des restaurants d'exception,</br>
+          <p class="section-title__subtitle">Découvrez des restaurants d'exception,<br>
             sélectionnés par nos soins.</p>
           <!-- Bouton -->
           <button class="button" type="submit" >Explorer nos restaurants</button>
@@ -75,12 +75,12 @@
             
             <article class="cards">
               <a href="lapalettedugout.html">
-                  <figure class="cards__img">
-                    <img srcset="./images/la_palette_du_gout_S.jpg 500w, ./images/la_palette_du_gout_M.jpg 1000w" 
-                         sizes="(max-width: 1024px) 500px, 1000px"
-                         src="./images/la_palette_du_gout_S.jpg" alt="Photo d'un plat du restaurant La palette du goût" />
-                    <p class="new bold">Nouveau</p>
-                  </figure>
+                  <picture class="cards__img">
+                    <source media="(max-width: 1030px)" srcset="./images/la_palette_du_gout_S.jpg" />
+                    <source media="(min-width: 1030px)" srcset="./images/la_palette_du_gout_M.jpg" />
+                    <img src="./images/la_palette_du_gout_S.jpg" alt="Photo d'un plat du restaurant La palette du goût" />
+                  </picture>
+                  <p class="new bold">Nouveau</p>
                   <div class="cards__txt-card">
                     <div>
                       <h3 class="bold">La palette du goût</h3>
@@ -97,12 +97,12 @@
 
             <article class="cards">
               <a href="lanoteenchantee.html">
-                <figure class="cards__img">
-                  <img srcset="./images/la_note_enchantee_S.jpg 500w, ./images/la_note_enchantee_M.jpg 1000w"
-                       sizes="(max-width: 1024px) 500px, 1000px"
-                       src="./images/la_note_enchantee_S.jpg" alt="Photo d'un plat du restaurant La note enchantée" />
-                  <p class="new bold">Nouveau</p>
-                </figure>
+                <picture class="cards__img">
+                  <source media="(max-width: 1030px)" srcset="./images/la_note_enchantee_S.jpg" />
+                  <source media="(min-width: 1030px)" srcset="./images/la_note_enchantee_M.jpg" />
+                  <img src="./images/la_note_enchantee_S.jpg" alt="Photo d'un plat du restaurant La note enchantée" />
+                </picture>
+                <p class="new bold">Nouveau</p>
                 <div class="cards__txt-card">
                   <div>
                     <h3 class="bold">La note enchantée</h3>
@@ -120,11 +120,11 @@
             
             <article class="cards">
               <a href="alafrancaise.html">
-                <figure class="cards__img">
-                  <img srcset="./images/a_la_francaise_S.jpg 500w, ./images/a_la_francaise_M.jpg 1000w"
-                       sizes="(max-width: 1024px) 500px, 1000px"
-                       src="./images/a_la_francaise_S.jpg" alt="Photo d'un plat du restaurant À la française" />
-                </figure>
+                <picture class="cards__img">
+                  <source media="(max-width: 1030px)" srcset="./images/a_la_francaise_S.jpg" />
+                  <source media="(min-width: 1030px)" srcset="./images/a_la_francaise_M.jpg" />
+                  <img src="./images/a_la_francaise_S.jpg" alt="Photo d'un plat du restaurant À la française" />
+                </picture>
                 <div class="cards__txt-card">
                   <div>
                     <h3 class="bold">À la française</h3>
@@ -141,11 +141,11 @@
 
             <article class="cards">
               <a href="ledelicedessens.html">
-                <figure class="cards__img">
-                  <img srcset="./images/le_delice_des_sens_S.jpg 500w, ./images/le_delice_des_sens_M.jpg 1000w"
-                       sizes="(max-width: 1024px) 500px, 1000px"
-                       src="./images/le_delice_des_sens_S.jpg" alt="Photo d'un plat du restaurant Le délice des sens" />
-                </figure>
+                <picture class="cards__img">
+                  <source media="(max-width: 1030px)" srcset="./images/le_delice_des_sens_S.jpg" />
+                  <source media="(min-width: 1030px)" srcset="./images/le_delice_des_sens_M.jpg" />
+                  <img src="./images/le_delice_des_sens_S.jpg" alt="Photo d'un plat du restaurant Le délice des sens" />
+                </picture>
                 <div class="cards__txt-card">
                   <div>
                     <h3 class="bold">Le délice des sens</h3>

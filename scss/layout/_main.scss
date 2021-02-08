@@ -12,6 +12,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 1440px;
+  margin: auto;
   &__icone {
     transform: rotate(360deg);
     animation: icone 3000ms forwards;
@@ -232,7 +234,6 @@ input[type="search"] {
   }   
   &__img {
     display: flex;
-    position: relative; 
     overflow: hidden;   
     img {
       transform: scale(1);
@@ -321,4 +322,8 @@ input[type="checkbox"] {
   padding: 0.5rem 0.8rem;
   border-radius: 0.2rem;
   font-size: 0.85rem;
+  @include respond-to(large-screen) {
+    font-size: 1rem;
+  }   
+
 }
