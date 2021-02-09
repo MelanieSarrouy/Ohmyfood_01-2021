@@ -1,15 +1,109 @@
-@mixin box-shadow {
-  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.3);
+@mixin box-shadow($rgba: rgba(0, 0, 0, 0.3)) {
+  box-shadow: 0 0.4rem 1rem $rgba;
+}
+
+/* animations */ 
+
+@mixin scale-top {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+/* texte */ 
+
+@mixin text-hidden {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@mixin bg-clip-transp {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; 
+}
+/* boutons */ 
+
+@mixin bouton($padding, $margin) {
+  text-align: center;
+  padding: $padding;
+  margin: $margin;
+  color: white;
+  font-family: $font-family-texte;
+  border-style: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background: linear-gradient(170deg, $color-secondary 0%, $color-primary 100%);
+  @include box-shadow;
+  @include respond-to(medium-screen) {
+    font-size: 1.2rem;
+  }
+}
+@mixin btn-hover {
+  opacity: 0.7;
+  @include box-shadow(rgba(0, 0, 0, 0.8));
+  transition: opacity 800ms ease-out, box-shadow 200ms ease-in-out;
+}
+@mixin btn-focus {
+  outline: none;
+}
+
+/* coeur */ 
+
+@mixin heart($bg-color: white) {
+  border-style: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  background-color: $bg-color;
+  outline: none;
+}
+@mixin heart-full($bg-color: white) {
+  opacity: 1;
+  background-color: $bg-color;
+  z-index: 3;  
+
+}
+@mixin heart-empty {
+  background: linear-gradient(10deg, $color-secondary 0%, $color-primary 100%);
+  @include bg-clip-transp;
+  position: absolute;
+  left: 0rem;
+  top: 0.15rem;
+  right: 0rem;
+  bottom: 0rem;
+  opacity: 0;
+  z-index: 10;
+}
+@mixin heart-between($bg-color: white) {
+  content: "";
+  opacity: 1;
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  bottom: 0rem;
+  left: 0rem;
+  width: 2.3rem;
+  height: 2rem;
+  background-color: $bg-color;
+  @include scale-top;
+  z-index: 10;
+}
+@mixin heart-anim {
+  transform: scaleY(0);
+  transition: transform 1000ms cubic-bezier(0,.27,.02,.99);
+}
+
+/* flex */ 
+
+@mixin flex($direction: column, $justify: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
 }
 
 /* media queries */ 
 
 @mixin respond-to($media) {
-  @if $media == x-small-screen {
-    @media all and (max-width: $x-small-screen) {
-      @content;
-    }
-  }
   @if $media == medium-screen {
     @media all and (min-width: $medium-screen) {
       @content;
