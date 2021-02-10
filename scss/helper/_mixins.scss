@@ -18,7 +18,6 @@
 }
 @mixin bg-clip-transp {
   -webkit-background-clip: text;
-  background-clip: text;
   color: transparent; 
 }
 /* boutons */ 
@@ -60,8 +59,7 @@
 @mixin heart-full($bg-color: white) {
   opacity: 1;
   background-color: $bg-color;
-  z-index: 3;  
-
+  z-index: 3;
 }
 @mixin heart-empty {
   background: linear-gradient(10deg, $color-secondary 0%, $color-primary 100%);
