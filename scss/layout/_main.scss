@@ -135,7 +135,7 @@ input[type="search"] {
 .item {
   padding: 1.5rem 1rem 1.5rem 0.7rem;
   margin-left: 1rem;
-  display: flex;
+  @include flex(row, flex-start);
   align-items: center;
   margin-bottom: 1.5rem; 
   background-color: $color-background;
@@ -228,20 +228,16 @@ input[type="search"] {
   }
 }
 /* Bouton Coeur */ 
-input[type="checkbox"] {
-  position: absolute;
-  left: -9999px;
-}
 .button-heart {
   @include heart;
   position: absolute;
   right: 1.5rem;
   bottom: 1.5rem;
   i:last-child {
-    @include heart-full;
+    @include heart-empty;
   } 
   i:first-child {
-    @include heart-empty;
+    @include heart-full;
     &::after {
       @include heart-between;
     }

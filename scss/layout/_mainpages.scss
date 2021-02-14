@@ -45,10 +45,10 @@
   @include heart($color-background);
   position: relative;
   i:last-child {
-    @include heart-full($color-background);
+    @include heart-empty($color-background);
   } 
   i:first-child {
-    @include heart-empty;
+    @include heart-full;
     &::after {
       @include heart-between($color-background);
     }

@@ -56,12 +56,11 @@
   background-color: $bg-color;
   outline: none;
 }
-@mixin heart-full($bg-color: white) {
+@mixin heart-empty($bg-color: white) {
   opacity: 1;
   background-color: $bg-color;
-  z-index: 3;
 }
-@mixin heart-empty {
+@mixin heart-full {
   background: linear-gradient(10deg, $color-secondary 0%, $color-primary 100%);
   @include bg-clip-transp;
   position: absolute;
@@ -70,7 +69,6 @@
   right: 0rem;
   bottom: 0rem;
   opacity: 0;
-  z-index: 10;
 }
 @mixin heart-between($bg-color: white) {
   content: "";
@@ -84,7 +82,6 @@
   height: 2rem;
   background-color: $bg-color;
   @include scale-top;
-  z-index: 10;
 }
 @mixin heart-anim {
   transform: scaleY(0);
